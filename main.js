@@ -1,4 +1,4 @@
-const botdPromise = import('/botid.js').then((Botd) => Botd.load());
+const botdPromise = import('./botid.js').then((Botd) => Botd.load());
 
 
 const createLoader = () => {
