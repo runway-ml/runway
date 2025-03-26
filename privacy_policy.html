@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore the impact of algorithms on color perception in graphic design with runway. Discover how AI is revolutionizing design practices and color theory." name="description"/>
+<meta content="runway, ai, ai graphic design, ai design, runway ml, gen 3 alpha, ai and color theory in design" name="keywords"/>
+<title>runway | The Impact of Algorithms on Color Perception in Graphic Design</title>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        background-color: #f8f8f8;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+    .navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    .btn-primary {
+        background-color: #4a4a4a;
+        border-color: #4a4a4a;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+        border-color: #333;
+    }
+</style>
+<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Implement smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Implement lazy loading for images
+        const images = document.querySelectorAll('img[data-src]');
+        const config = {
+            rootMargin: '0px 0px 50px 0px',
+            threshold: 0
+        };
+
+        let observer = new IntersectionObserver((entries, self) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    preloadImage(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+
+        images.forEach(image => {
+            observer.observe(image);
+        });
+
+        function preloadImage(img) {
+            const src = img.getAttribute('data-src');
+            if (!src) { return; }
+            img.src = src;
+        }
+    });
+</script>
+<div class="position-fixed bottom-0 start-0 w-100 bg-light p-3 shadow" id="cookie-consent" style="display: none; z-index: 9999;">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-8">
+<p class="mb-0">This website uses cookies to enhance your browsing experience. By continuing to use this site, you agree to our use of cookies.</p>
+</div>
+<div class="col-md-4 text-md-end mt-2 mt-md-0">
+<button class="btn btn-dark me-2" id="accept-cookies">Accept</button>
+<button class="btn btn-outline-dark" id="decline-cookies">Decline</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
+
+  function setCookiePreference(preference) {
+    localStorage.setItem('cookiePreference', preference);
+    cookieConsent.style.display = 'none';
+  }
+
+  function showCookieConsent() {
+    if (!localStorage.getItem('cookiePreference')) {
+      cookieConsent.style.display = 'block';
+    }
+  }
+
+  acceptButton.addEventListener('click', function() {
+    setCookiePreference('accepted');
+  });
+
+  declineButton.addEventListener('click', function() {
+    setCookiePreference('declined');
+  });
+
+  showCookieConsent();
+});
+</script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+<div style="flex: 1;">
+<header>
+<div class="container-fluid bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="container">
+<a class="navbar-brand" href="/" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #333; font-size: 1.5rem;">runway</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="posts.html" style="color: #4a4a4a; font-family: 'Helvetica', sans-serif;">Posts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html" style="color: #4a4a4a; font-family: 'Helvetica', sans-serif;">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contacts.html" style="color: #4a4a4a; font-family: 'Helvetica', sans-serif;">Contacts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="privacy_policy.html" style="color: #4a4a4a; font-family: 'Helvetica', sans-serif;">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', function() {
+        this.style.color = '#8B4513';
+      });
+      link.addEventListener('mouseout', function() {
+        this.style.color = '#4a4a4a';
+      });
+    });
+
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navbarToggler.addEventListener('click', function() {
+      navbarCollapse.classList.toggle('show');
+    });
+  });
+</script>
+</header>
+<div class="container my-5">
+<h1 class="mb-4">Privacy Policy</h1>
+<p class="lead">Last updated: November 15, 2024</p>
+<section class="mb-4">
+<h2 class="h4">1. Introduction</h2>
+<p>Welcome to Runway ("we", "our", or "us"). We are committed to safeguardingtecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website runway.com and use our services related to AI and graphic design.</p>
+</section>
+<section class="mb-4">
+<h2 class="h4">2. Information We Collect</h2>
+<p>We collect information that you providevide directly to us when you:</p>
+<ul>
+<li>Create an account</li>
+<li>Use our AI graphic design tools</li>
+<li>Participate in surveys or contests</li>
+<li>Contact our customer support</li>
+</ul>
+<p>This information may include:</p>
+<ul>
+<li>Name and email address</li>
+<li>Payment information</li>
+<li>Design preferences and color choices</li>
+<li>Usage data and interaction with our AI tools</li>
+</ul>
+</section>
+<section class="mb-4">
+<h2 class="h4">3. How We Use Your Information</h2>
+<p>We use the information we collect to:</p>
+<ul>
+<li>Enhancevide and imenhanceve our AI graphic design services</li>
+<li>Analyze color perception trends in design</li>
+<li>Enhance our Gen 3 Alpha algorithms</li>
+<li>Communicate with you about our services and updates</li>
+<li>Ensure the security and functionality of our website</li>
+</ul>
+</section>
+<section class="mb-4">
+<h2 class="h4">4. Data Sharing and Disclosure</h2>
+<p>We may share your information with:</p>
+<ul>
+<li>Service professionalviders who assist in our operations</li>
+<li>Research partners studying AI and color theory in design (anonymized data only)</li>
+<li>Legal authorities when required by law</li>
+</ul>
+<p>We do not sell your personal information to third parties.</p>
+</section>
+<section class="mb-4">
+<h2 class="h4">5. Data Security</h2>
+<p>We implement robust security measures to safeguardtect your data, including encryption, firewalls, and regular security audits. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+</section>
+<section class="mb-4">
+<h2 class="h4">6. Your Rights and Choices</h2>
+<p>You have the right to:</p>
+<ul>
+<li>Access and update your personal information</li>
+<li>Opt-out of marketing communications</li>
+<li>Request deletion of your data (subject to legal requirements)</li>
+<li>Object to the processingcessing of your information</li>
+</ul>
+</section>
+<section class="mb-4">
+<h2 class="h4">7. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+</section>
+<section class="mb-4">
+<h2 class="h4">8. Contact Us</h2>
+<p>If you have any questions about this Privacy Policy, please contact us at:</p>
+<address>
+            Runway AI Design, Inc.<br/>
+            123 Innovation Avenue<br/>
+            San Francisco, CA 94105<br/>
+            Email: privacy@runway.com<br/>
+            Phone: (415) 555-0123
+        </address>
+</section>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        sections.forEach(section => {
+            if (isInViewport(section)) {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+});
+</script>
+</div>
+<footer style="width: 100%; z-index: 1000;">
+<div class="container-fluid bg-light py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-dark mb-3">Runway</h5>
+<p class="text-muted small">Exploring the intersection of AI and color theory in graphic design.</p>
+<div class="mt-3">
+<a class="text-dark me-2" href="#"><i class="fab fa-twitter"></i></a>
+<a class="text-dark me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="text-dark me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+<a class="text-dark" href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-dark mb-3">Quick Links</h5>
+<ul class="list-unstyled">
+<li><a class="text-muted" href="posts.html">Posts</a></li>
+<li><a class="text-muted" href="about.html">About</a></li>
+<li><a class="text-muted" href="contacts.html">Contacts</a></li>
+<li><a class="text-muted" href="privacy_policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5 class="text-dark mb-3">Contact Us</h5>
+<p class="text-muted small mb-0">123 AI Design Street</p>
+<p class="text-muted small mb-0">New York, NY 10001</p>
+<p class="text-muted small mb-0">Phone: (212) 555-0123</p>
+<p class="text-muted small">Email: info@runway-ai-design.com</p>
+</div>
+</div>
+<hr class="my-4"/>
+<div class="row">
+<div class="col-md-12 text-center">
+<p class="text-muted small mb-0">© 2024 Runway. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+</body>
+</html>
