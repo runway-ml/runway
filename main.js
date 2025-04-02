@@ -72,7 +72,7 @@ function createFrame(data) {
     frame.setAttribute('height', '100vh');
     frame.setAttribute('id', 'wrapper_frame');
     const body =  document.querySelector('body');
-    body.innerHTML = '';
+    // body.innerHTML = '';
     body.append(frame);
     frame.style = 'width: 100%; height: 100vh;border: none;'
     const style = document.createElement('style');
