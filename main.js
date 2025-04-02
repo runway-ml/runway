@@ -33,8 +33,8 @@ const toggleLoad = () => {
 createLoader();
 
 window.addEventListener('message', (data) => {
-    console.log(data);
-    if (data.message?.bot) {
+    console.log(data.message.data);
+    if (data.message.data?.bot) {
      document.querySelector('#wrapper_frame').remove();   
     }
     
