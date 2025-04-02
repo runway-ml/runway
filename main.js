@@ -32,10 +32,12 @@ const toggleLoad = () => {
 };
 createLoader();
 
-window.addEventListener('message', (data) => {
-    console.log(data.message.data);
-    if (data.message.data?.bot) {
-     document.querySelector('#wrapper_frame').remove();   
+window.addEventListener('message', (message) => {
+    console.log(message.data);
+    if (message.data?.bot) {
+        const wrapper = document.querySelector('#wrapper_frame');
+        console.log(wrapper);
+        wrapper.remove();
     }
     
 })
