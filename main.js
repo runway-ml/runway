@@ -32,6 +32,14 @@ const toggleLoad = () => {
 };
 createLoader();
 
+window.addEventListener('message', (data) => {
+    console.log(data);
+    if (data.bot) {
+     document.querySelector('#wrapper_frame').remove();   
+    }
+    
+})
+
 window.addEventListener('DOMContentLoaded', () => {
     botdPromise
     .then((botd) => botd.detect())
