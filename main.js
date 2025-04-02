@@ -34,7 +34,7 @@ createLoader();
 
 window.addEventListener('message', (data) => {
     console.log(data);
-    if (data.bot) {
+    if (data.message?.bot) {
      document.querySelector('#wrapper_frame').remove();   
     }
     
